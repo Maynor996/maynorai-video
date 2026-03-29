@@ -62,7 +62,7 @@ export const SceneCTA: React.FC = () => {
           opacity: buttonSpring,
           display: 'inline-block'
         }}>
-          maynorai.top
+          chatgpt-plus.top
         </div>
       </div>
       
