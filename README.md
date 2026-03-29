@@ -1,6 +1,6 @@
 # MaynorAI 宣传视频项目 (Remotion)
 
-本项目包含为 **MaynorAI** (https://maynorai.top) 制作的 30 秒竖版 (1080x1920) 宣传视频源代码。
+本项目包含为 **MaynorAI** (https://chatgpt-plus.top) 制作的 30 秒竖版 (1080x1920) 宣传视频源代码。
 
 ## 🎬 视频概览
 - **目标**：展示 MaynorAI 作为全网最稳定的 AI 官方代理服务。
