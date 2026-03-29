@@ -1,4 +1,4 @@
-import { AbsoluteFill, Sequence, useCurrentFrame, interpolate, spring, useVideoConfig } from 'remotion';
+import { AbsoluteFill, Sequence, useCurrentFrame, interpolate, spring, useVideoConfig, Audio, staticFile } from 'remotion';
 import { SceneIntro } from './SceneIntro';
 import { SceneFeatures } from './SceneFeatures';
 import { SceneAdvantages } from './SceneAdvantages';
@@ -42,24 +42,28 @@ export const Main: React.FC<MainProps> = ({ title, subTitle, features, advantage
       <Sequence from={introStart} durationInFrames={introDuration}>
         <div style={{ opacity: getOpacity(introStart, introDuration), width: '100%', height: '100%' }}>
           <SceneIntro title={title} subTitle={subTitle} />
+          <Audio src={staticFile('audio/scene1.mp3')} />
         </div>
       </Sequence>
       
       <Sequence from={featuresStart} durationInFrames={featuresDuration}>
         <div style={{ opacity: getOpacity(featuresStart, featuresDuration), width: '100%', height: '100%' }}>
           <SceneFeatures features={features} />
+          <Audio src={staticFile('audio/scene2.mp3')} />
         </div>
       </Sequence>
       
       <Sequence from={advantagesStart} durationInFrames={advantagesDuration}>
         <div style={{ opacity: getOpacity(advantagesStart, advantagesDuration), width: '100%', height: '100%' }}>
           <SceneAdvantages advantages={advantages} />
+          <Audio src={staticFile('audio/scene3.mp3')} />
         </div>
       </Sequence>
       
       <Sequence from={ctaStart} durationInFrames={ctaDuration}>
         <div style={{ opacity: interpolate(frame, [ctaStart, ctaStart + transitionFrames], [0, 1], { extrapolateLeft: 'clamp' }), width: '100%', height: '100%' }}>
           <SceneCTA />
+          <Audio src={staticFile('audio/scene4.mp3')} />
         </div>
       </Sequence>
     </AbsoluteFill>
